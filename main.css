@@ -1,10 +1,10 @@
 /*
   This will select both of the article__header elements
 */
-.article .article__header {
+/* .article .article__header {
     font-size: 1.85em;
     line-height: 1.2em;
-}
+} */
 
 /*
   This will select only the section and ignore the div
@@ -39,54 +39,74 @@ header {
   border-color: goldenrod;
 }
 /* 2. Convert the ul in the navigation element into a series of horizontal links with # as the href value, without bullets, and have some space between them horizontally. */
-header li {
+nav li {
   display: inline;
   list-style-type: none;
-  margin-right: 100px;
-  text-align: center; 
+  padding: 0px 40px 0px 40px;
 }
 
-header > ul {
-  text-align: center;
-}
-
-/* 3. Ensure that the navigation is semantically marked as such (i.e. wrap it in the correct HTML tag). */
+/* 3. Ensure that the navigation is semantically marked as such (i.e. wrap it in the correct HTML tag). !!!COMPLETE!!! */
 
 /* 4. Any text in an element with class "disabled" should be colored grey, unless it is an attribute of an anchor tag. If it is an attribute of an anchor tag, it should be colored purple. */
 .disabled {
   color: gray;
 }
 
-a .disabled {
+a .disabled,
+a.disabled {
   color: purple;
 }
+
 
 /* 5. Any text inside an element with a class of "active" should be colored yellow. */
 .active {
   color: rgba(249, 249, 15, 0.899);
 }
 
-/* 6. Section elements should be contained within an article element. */
+/* 6. Section elements should be contained within an article element. !!!COMPLETE!!!*/
 
-/* 7. There are two missing closing tags in this document. Make sure you add them back in. */
+
+/* 7. There are two missing closing tags in this document. Make sure you add them back in. !!!COMPLETE!!!*/ 
 
 /* 8. Make the "I'm red" text colored red.  */
-.parent div > div:first-child {
+.parent div div {
   color: red;
 }
 
 /* 9. Make the "I'm blue" text colored blue. */
-.parent div div {
+.parent div h4 + div {
   color: blue;
 }
 
 /* 10. The sibling h4 of the red element should have a background color of red. */
-/* 
+/*  */
 
-/* 11. The sibling h4 of the blue element should have background color of blue. */
+.parent div + h4 {
+  background-color: red;
+}
+
+/* /* 11. The sibling h4 of the blue element should have background color of blue. */
+
+.parent div h4:nth-child(4) {
+  background-color: blue;
+}
 
 /* 12. Any h4 that is a direct child of grandparent should have a 1px border with rounded corners. */
 
+.grandparent > h4 {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
 /* 13. Elements with a class of promo should have bold text that is also colored gold. */
 
+.promo {
+  font-weight: bold;
+  color: gold;
+}
+
 /* 14. Without adding any other attributes to the input fields in the footer, write a CSS selector that makes any text input field have a height of 25px. */
+
+input {
+  height: 25px;
+}
